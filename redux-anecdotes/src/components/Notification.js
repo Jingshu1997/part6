@@ -1,4 +1,3 @@
-
 import React from 'react'
 import {connect} from 'react-redux'
 
@@ -24,15 +23,3 @@ const mapStateToProps = (state) => {
 
 export default connect(
   mapStateToProps)(Notification)
-
-
-/* const mapDispatchToProps = {
-  filterChange
-}
-
-
-export default connect(
-  null, 
-  mapDispatchToProps
-  )(Filter)
-   */

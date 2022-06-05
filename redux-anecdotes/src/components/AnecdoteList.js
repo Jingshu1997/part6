@@ -1,10 +1,10 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
 import { connect } from 'react-redux'
 import { addVote } from '../reducers/anecdoteReducer'
-import {  setNotification  } from '../reducers/NotificationReducer'
-
+import {  setNotification  } from '../reducers/notificationReducer'
+import '../index.css'
 const AnecdoteList = (props) => {
+
   const vote = (anecdote) => {
     const anecdotevalue= props.anecdotes.find(n => n.id === anecdote)
    

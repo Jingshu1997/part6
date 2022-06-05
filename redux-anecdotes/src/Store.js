@@ -1,10 +1,8 @@
-//import { createStore, combineReducers } from 'redux'
-
 import { configureStore } from '@reduxjs/toolkit'
 import anecdoteService from './services/anecdotes'
 import anecdoteReducer, { setAnecdotes  } from './reducers/anecdoteReducer'
-import filterReducer from './reducers/FilterReducer.js'
-import notificationReducer from './reducers/NotificationReducer'
+import filterReducer from './reducers/filterReducer'
+import notificationReducer from './reducers/notificationReducer'
 
   const store = configureStore({
     reducer: {

@@ -1,8 +1,9 @@
+
 import React from 'react'
 import { connect } from 'react-redux'
 import { createAnecdote } from '../reducers/anecdoteReducer'
-import { setNotification} from '../reducers/NotificationReducer'
-import anecdoteService from '../services/anecdotes'
+import { setNotification} from '../reducers/notificationReducer'
+
 const AnecdoteForm = (props) => {
 
 
@@ -10,6 +11,7 @@ const AnecdoteForm = (props) => {
     event.preventDefault()
     const  content  = event.target.anecdote.value
     event.target.anecdote.value = ''
+
    props.createAnecdote(content)
     console.log(content)
    props.setNotification(`new anecdote '${content}'`, 5)
@@ -39,14 +41,3 @@ export default connect(
   null,
   mapDispatchToProps
 )(AnecdoteForm)
-
-/* const mapDispatchToProps = {
-  filterChange
-}
-
-
-export default connect(
-  null, 
-  mapDispatchToProps
-  )(Filter)
-   */

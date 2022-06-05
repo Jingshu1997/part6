@@ -13,11 +13,11 @@ const createNew = async (anecdote) => {
     votes: 0
   }
   const response = await axios.post(baseUrl, object)
-//  console.log(response.data)
+
   return response.data
 }
 const addVote = async (anecdote) => {
-  //console.log(anecdote)
+
   const updateAnecdote = {
     content: anecdote.content,
     votes: anecdote.votes + 1,
